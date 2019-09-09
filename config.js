@@ -4,6 +4,6 @@
 
 module.exports = {
   db: {
-    uri: 'mongodb+srv://kdagnan:gR7FitmuVIat03es@uflistingkdagnan-w3fsm.mongodb.net/UFListingKDagnan', //place the URI of your mongo database here.
+    uri: 'mongodb+srv://kdagnan:Tw3RJrLKuH9eJgq0@uflistingkdagnan-w3fsm.mongodb.net/UFListingKDagnan', //place the URI of your mongo database here.
   }
 };
