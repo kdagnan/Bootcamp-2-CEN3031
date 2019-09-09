@@ -23,7 +23,11 @@ listing =  {
 describe('Listing Schema Unit Tests', function() {
 
   before(function(done) {
-    mongoose.connect(config.db.uri, { useNewUrlParser: true });
+    mongoose.connect(config.db.uri, { useNewUrlParser: true }).then(success => {
+      console.log("Connected Successfully");
+    }).catch(error => {
+      console.log("Error Connecting: " + error);
+    });
     mongoose.set('useCreateIndex', true);
     mongoose.set('useFindAndModify', false);
     done();
@@ -34,7 +38,7 @@ describe('Listing Schema Unit Tests', function() {
       Mocha's default timeout for tests is 2000ms. To ensure that the tests do not fail 
       prematurely, we can increase the timeout setting with the method this.timeout()
      */
-    this.timeout(10000);
+    this.timeout(2000);
 
     it('saves properly when code and name provided', function(done){
       new Listing({
